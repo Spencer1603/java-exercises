@@ -3,9 +3,6 @@ package org.launchcode.java.demos.java4python;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * Created by LaunchCode
- */
 public class Gradebook {
 
     public static void main(String[] args) {
@@ -25,7 +22,7 @@ public class Gradebook {
                 students.add(newStudent);
             }
 
-        } while(!newStudent.equals(""));
+        } while (!newStudent.equals(""));
 
         // Get student grades
         for (String student : students) {
@@ -46,5 +43,4 @@ public class Gradebook {
         double avg = sum / students.size();
         System.out.println("Average grade: " + avg);
     }
-
 }
