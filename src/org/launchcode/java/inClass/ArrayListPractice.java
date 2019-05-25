@@ -11,8 +11,8 @@ public class ArrayListPractice {
         first.add(1);
 
         ArrayList<Integer> second = new ArrayList<Integer>();
-        first.add(1);
-        first.add(6);
+        second.add(1);
+        second.add(6);
 
         ArrayList<Integer> answer  = addLists(first, second);
         System.out.println(answer);
@@ -24,26 +24,26 @@ public class ArrayListPractice {
         int length1 = list1.size();
         int length2 = list2.size();
 
-        ArrayList<Integer> smaller = list1;
-        ArrayList<Integer> larger = list2;
+        ArrayList<Integer> small = list1;
+        ArrayList<Integer> large = list2;
 
         //see which list is larger
         if(length1 > length2) {
-            larger = list1;
-            smaller = list2;
+            large = list1;
+            small = list2;
         }
 
         //for each value in the smaller list
-        for(int i = 0; i < smaller.size(); i++){
+        for(int i = 0; i < small.size(); i++){
             //add values from both lists
-            int sum = smaller.get(i) + larger.get(i);
+            int sum = small.get(i) + large.get(i);
             results.add(sum);
         }
 
         // for the remaining values in the longer list
-        for(int j = smaller.size(); j = larger.size(); j++) {
+        for(int j = small.size(); j < large.size(); j++) {
             //copy values
-            results.add(larger.get(j));
+            results.add(large.get(j));
         }
 
         //return results
